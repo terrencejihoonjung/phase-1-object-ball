@@ -115,3 +115,20 @@ function gameObject() {
     }
     return gameObject;
 }
+
+function numPointsScored(name) {
+    let game = gameObject();
+    for (let gameType in game) {
+        let gameLocation = game[gameType] 
+        for (let gameProperty in gameLocation) {
+            let playerList = gameLocation.players
+            console.log(playerList)
+            for (let player in playerList) {
+                if (player === name) {
+                    return player.points
+                }
+            }
+        }
+    }
+    
+}
